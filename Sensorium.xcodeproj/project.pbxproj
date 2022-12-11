@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A158A5429460E7100180CF9 /* LogReacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A158A5329460E7100180CF9 /* LogReacter.swift */; };
+		4A158A5429460E7100180CF9 /* LogAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A158A5329460E7100180CF9 /* LogAction.swift */; };
 		4A158A5629460E8C00180CF9 /* PasteboardSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A158A5529460E8C00180CF9 /* PasteboardSensor.swift */; };
 		4A158A5829460EAD00180CF9 /* SensedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A158A5729460EAD00180CF9 /* SensedEvent.swift */; };
 		4A158A6029460EE000180CF9 /* PasteboardSensorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A158A5F29460EE000180CF9 /* PasteboardSensorTests.swift */; };
@@ -16,7 +16,7 @@
 		4A19D6F22939B96A00221C75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A19D6F12939B96A00221C75 /* Assets.xcassets */; };
 		4A19D6F52939B96A00221C75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A19D6F42939B96A00221C75 /* Preview Assets.xcassets */; };
 		4A949FC52939BE6E009317C9 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A949FC42939BE6E009317C9 /* Sensor.swift */; };
-		4A949FC72939BE76009317C9 /* Reacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A949FC62939BE76009317C9 /* Reacter.swift */; };
+		4A949FC72939BE76009317C9 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A949FC62939BE76009317C9 /* Action.swift */; };
 		4A949FCB2939C027009317C9 /* NSNotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A949FCA2939C027009317C9 /* NSNotificationNames.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4A158A5329460E7100180CF9 /* LogReacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogReacter.swift; sourceTree = "<group>"; };
+		4A158A5329460E7100180CF9 /* LogAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAction.swift; sourceTree = "<group>"; };
 		4A158A5529460E8C00180CF9 /* PasteboardSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardSensor.swift; sourceTree = "<group>"; };
 		4A158A5729460EAD00180CF9 /* SensedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensedEvent.swift; sourceTree = "<group>"; };
 		4A158A5D29460EE000180CF9 /* SensoriumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensoriumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +43,7 @@
 		4A19D6F42939B96A00221C75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4A19D6F62939B96A00221C75 /* Sensorium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sensorium.entitlements; sourceTree = "<group>"; };
 		4A949FC42939BE6E009317C9 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
-		4A949FC62939BE76009317C9 /* Reacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reacter.swift; sourceTree = "<group>"; };
+		4A949FC62939BE76009317C9 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		4A949FCA2939C027009317C9 /* NSNotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationNames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,7 +94,7 @@
 		4A19D6EC2939B96900221C75 /* Sensorium */ = {
 			isa = PBXGroup;
 			children = (
-				4A949FC32939BE2D009317C9 /* Reacters */,
+				4A949FC32939BE2D009317C9 /* Acrion */,
 				4A949FC22939BE29009317C9 /* Sensors */,
 				4A19D6ED2939B96900221C75 /* SensoriumApp.swift */,
 				4A19D6EF2939B96900221C75 /* ContentView.swift */,
@@ -117,20 +117,20 @@
 			isa = PBXGroup;
 			children = (
 				4A949FC42939BE6E009317C9 /* Sensor.swift */,
-				4A949FCA2939C027009317C9 /* NSNotificationNames.swift */,
-				4A158A5529460E8C00180CF9 /* PasteboardSensor.swift */,
 				4A158A5729460EAD00180CF9 /* SensedEvent.swift */,
+				4A158A5529460E8C00180CF9 /* PasteboardSensor.swift */,
+				4A949FCA2939C027009317C9 /* NSNotificationNames.swift */,
 			);
 			path = Sensors;
 			sourceTree = "<group>";
 		};
-		4A949FC32939BE2D009317C9 /* Reacters */ = {
+		4A949FC32939BE2D009317C9 /* Acrion */ = {
 			isa = PBXGroup;
 			children = (
-				4A949FC62939BE76009317C9 /* Reacter.swift */,
-				4A158A5329460E7100180CF9 /* LogReacter.swift */,
+				4A949FC62939BE76009317C9 /* Action.swift */,
+				4A158A5329460E7100180CF9 /* LogAction.swift */,
 			);
-			path = Reacters;
+			path = Acrion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,10 +245,10 @@
 				4A19D6F02939B96900221C75 /* ContentView.swift in Sources */,
 				4A158A5829460EAD00180CF9 /* SensedEvent.swift in Sources */,
 				4A949FCB2939C027009317C9 /* NSNotificationNames.swift in Sources */,
-				4A949FC72939BE76009317C9 /* Reacter.swift in Sources */,
+				4A949FC72939BE76009317C9 /* Action.swift in Sources */,
 				4A949FC52939BE6E009317C9 /* Sensor.swift in Sources */,
 				4A19D6EE2939B96900221C75 /* SensoriumApp.swift in Sources */,
-				4A158A5429460E7100180CF9 /* LogReacter.swift in Sources */,
+				4A158A5429460E7100180CF9 /* LogAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

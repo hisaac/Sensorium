@@ -1,9 +1,9 @@
 import Combine
 
-final class LogReacter: Reacter {
+final class LogAction: Action {
 	let name = #file
-	let friendlyName = "Log Reacter"
-	let description = "Reacter for logging events"
+	let friendlyName = "Log Action"
+	let description = "Action for logging events"
 
 	var subscriber: any Subscriber
 
