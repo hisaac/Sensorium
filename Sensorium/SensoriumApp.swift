@@ -13,10 +13,6 @@ struct SensoriumApp: App {
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 	func applicationDidFinishLaunching(_ notification: Notification) {
-		let applicationActivationSensor = ApplicationActivationSensor(
-			monitoredApplicationBundleID: "tv.plex.plexamp",
-			monitorActivation: true,
-			monitorDeactivation: true
-		)
+
 	}
 }

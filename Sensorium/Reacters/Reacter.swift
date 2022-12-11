@@ -1,9 +1,9 @@
 import Combine
 
-protocol Sensor {
+protocol Reacter {
 	var name: String { get }
 	var friendlyName: String { get }
 	var description: String { get }
 
-	var publisher: any Publisher { get }
+	var subscriber: any Subscriber { get }
 }

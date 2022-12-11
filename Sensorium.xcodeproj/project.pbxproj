@@ -7,17 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A158A5429460E7100180CF9 /* LogReacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A158A5329460E7100180CF9 /* LogReacter.swift */; };
+		4A158A5629460E8C00180CF9 /* PasteboardSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A158A5529460E8C00180CF9 /* PasteboardSensor.swift */; };
+		4A158A5829460EAD00180CF9 /* SensedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A158A5729460EAD00180CF9 /* SensedEvent.swift */; };
+		4A158A6029460EE000180CF9 /* PasteboardSensorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A158A5F29460EE000180CF9 /* PasteboardSensorTests.swift */; };
 		4A19D6EE2939B96900221C75 /* SensoriumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19D6ED2939B96900221C75 /* SensoriumApp.swift */; };
 		4A19D6F02939B96900221C75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19D6EF2939B96900221C75 /* ContentView.swift */; };
 		4A19D6F22939B96A00221C75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A19D6F12939B96A00221C75 /* Assets.xcassets */; };
 		4A19D6F52939B96A00221C75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A19D6F42939B96A00221C75 /* Preview Assets.xcassets */; };
 		4A949FC52939BE6E009317C9 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A949FC42939BE6E009317C9 /* Sensor.swift */; };
-		4A949FC72939BE76009317C9 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A949FC62939BE76009317C9 /* Action.swift */; };
-		4A949FC92939BF41009317C9 /* ApplicationActivationSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A949FC82939BF41009317C9 /* ApplicationActivationSensor.swift */; };
+		4A949FC72939BE76009317C9 /* Reacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A949FC62939BE76009317C9 /* Reacter.swift */; };
 		4A949FCB2939C027009317C9 /* NSNotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A949FCA2939C027009317C9 /* NSNotificationNames.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4A158A6129460EE000180CF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A19D6E22939B96900221C75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A19D6E92939B96900221C75;
+			remoteInfo = Sensorium;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		4A158A5329460E7100180CF9 /* LogReacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogReacter.swift; sourceTree = "<group>"; };
+		4A158A5529460E8C00180CF9 /* PasteboardSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardSensor.swift; sourceTree = "<group>"; };
+		4A158A5729460EAD00180CF9 /* SensedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensedEvent.swift; sourceTree = "<group>"; };
+		4A158A5D29460EE000180CF9 /* SensoriumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensoriumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A158A5F29460EE000180CF9 /* PasteboardSensorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardSensorTests.swift; sourceTree = "<group>"; };
 		4A19D6EA2939B96900221C75 /* Sensorium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sensorium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A19D6ED2939B96900221C75 /* SensoriumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensoriumApp.swift; sourceTree = "<group>"; };
 		4A19D6EF2939B96900221C75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,12 +43,18 @@
 		4A19D6F42939B96A00221C75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4A19D6F62939B96A00221C75 /* Sensorium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sensorium.entitlements; sourceTree = "<group>"; };
 		4A949FC42939BE6E009317C9 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
-		4A949FC62939BE76009317C9 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
-		4A949FC82939BF41009317C9 /* ApplicationActivationSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationActivationSensor.swift; sourceTree = "<group>"; };
+		4A949FC62939BE76009317C9 /* Reacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reacter.swift; sourceTree = "<group>"; };
 		4A949FCA2939C027009317C9 /* NSNotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationNames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4A158A5A29460EE000180CF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A19D6E72939B96900221C75 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,10 +65,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A158A5E29460EE000180CF9 /* SensoriumTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A158A5F29460EE000180CF9 /* PasteboardSensorTests.swift */,
+			);
+			path = SensoriumTests;
+			sourceTree = "<group>";
+		};
 		4A19D6E12939B96900221C75 = {
 			isa = PBXGroup;
 			children = (
 				4A19D6EC2939B96900221C75 /* Sensorium */,
+				4A158A5E29460EE000180CF9 /* SensoriumTests */,
 				4A19D6EB2939B96900221C75 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				4A19D6EA2939B96900221C75 /* Sensorium.app */,
+				4A158A5D29460EE000180CF9 /* SensoriumTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,7 +94,7 @@
 		4A19D6EC2939B96900221C75 /* Sensorium */ = {
 			isa = PBXGroup;
 			children = (
-				4A949FC32939BE2D009317C9 /* Actions */,
+				4A949FC32939BE2D009317C9 /* Reacters */,
 				4A949FC22939BE29009317C9 /* Sensors */,
 				4A19D6ED2939B96900221C75 /* SensoriumApp.swift */,
 				4A19D6EF2939B96900221C75 /* ContentView.swift */,
@@ -83,23 +117,43 @@
 			isa = PBXGroup;
 			children = (
 				4A949FC42939BE6E009317C9 /* Sensor.swift */,
-				4A949FC82939BF41009317C9 /* ApplicationActivationSensor.swift */,
 				4A949FCA2939C027009317C9 /* NSNotificationNames.swift */,
+				4A158A5529460E8C00180CF9 /* PasteboardSensor.swift */,
+				4A158A5729460EAD00180CF9 /* SensedEvent.swift */,
 			);
 			path = Sensors;
 			sourceTree = "<group>";
 		};
-		4A949FC32939BE2D009317C9 /* Actions */ = {
+		4A949FC32939BE2D009317C9 /* Reacters */ = {
 			isa = PBXGroup;
 			children = (
-				4A949FC62939BE76009317C9 /* Action.swift */,
+				4A949FC62939BE76009317C9 /* Reacter.swift */,
+				4A158A5329460E7100180CF9 /* LogReacter.swift */,
 			);
-			path = Actions;
+			path = Reacters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4A158A5C29460EE000180CF9 /* SensoriumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A158A6329460EE000180CF9 /* Build configuration list for PBXNativeTarget "SensoriumTests" */;
+			buildPhases = (
+				4A158A5929460EE000180CF9 /* Sources */,
+				4A158A5A29460EE000180CF9 /* Frameworks */,
+				4A158A5B29460EE000180CF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A158A6229460EE000180CF9 /* PBXTargetDependency */,
+			);
+			name = SensoriumTests;
+			productName = SensoriumTests;
+			productReference = 4A158A5D29460EE000180CF9 /* SensoriumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4A19D6E92939B96900221C75 /* Sensorium */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A19D6F92939B96A00221C75 /* Build configuration list for PBXNativeTarget "Sensorium" */;
@@ -127,6 +181,10 @@
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
+					4A158A5C29460EE000180CF9 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 4A19D6E92939B96900221C75;
+					};
 					4A19D6E92939B96900221C75 = {
 						CreatedOnToolsVersion = 14.1;
 					};
@@ -146,11 +204,19 @@
 			projectRoot = "";
 			targets = (
 				4A19D6E92939B96900221C75 /* Sensorium */,
+				4A158A5C29460EE000180CF9 /* SensoriumTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4A158A5B29460EE000180CF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A19D6E82939B96900221C75 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,22 +229,74 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4A158A5929460EE000180CF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A158A6029460EE000180CF9 /* PasteboardSensorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A19D6E62939B96900221C75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A158A5629460E8C00180CF9 /* PasteboardSensor.swift in Sources */,
 				4A19D6F02939B96900221C75 /* ContentView.swift in Sources */,
-				4A949FC92939BF41009317C9 /* ApplicationActivationSensor.swift in Sources */,
+				4A158A5829460EAD00180CF9 /* SensedEvent.swift in Sources */,
 				4A949FCB2939C027009317C9 /* NSNotificationNames.swift in Sources */,
-				4A949FC72939BE76009317C9 /* Action.swift in Sources */,
+				4A949FC72939BE76009317C9 /* Reacter.swift in Sources */,
 				4A949FC52939BE6E009317C9 /* Sensor.swift in Sources */,
 				4A19D6EE2939B96900221C75 /* SensoriumApp.swift in Sources */,
+				4A158A5429460E7100180CF9 /* LogReacter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4A158A6229460EE000180CF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A19D6E92939B96900221C75 /* Sensorium */;
+			targetProxy = 4A158A6129460EE000180CF9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		4A158A6429460EE000180CF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F2J52QJQ9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.hisaac.SensoriumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sensorium.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sensorium";
+			};
+			name = Debug;
+		};
+		4A158A6529460EE000180CF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F2J52QJQ9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.hisaac.SensoriumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sensorium.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sensorium";
+			};
+			name = Release;
+		};
 		4A19D6F72939B96A00221C75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -351,6 +469,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4A158A6329460EE000180CF9 /* Build configuration list for PBXNativeTarget "SensoriumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A158A6429460EE000180CF9 /* Debug */,
+				4A158A6529460EE000180CF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4A19D6E52939B96900221C75 /* Build configuration list for PBXProject "Sensorium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
