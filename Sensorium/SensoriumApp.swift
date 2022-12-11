@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct ReacterApp: App {
+struct SensoriumApp: App {
 	@NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate: AppDelegate
 
 	var body: some Scene {
