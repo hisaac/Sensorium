@@ -94,7 +94,7 @@
 		4A19D6EC2939B96900221C75 /* Sensorium */ = {
 			isa = PBXGroup;
 			children = (
-				4A949FC32939BE2D009317C9 /* Acrion */,
+				4A949FC32939BE2D009317C9 /* Action */,
 				4A949FC22939BE29009317C9 /* Sensors */,
 				4A19D6ED2939B96900221C75 /* SensoriumApp.swift */,
 				4A19D6EF2939B96900221C75 /* ContentView.swift */,
@@ -124,13 +124,13 @@
 			path = Sensors;
 			sourceTree = "<group>";
 		};
-		4A949FC32939BE2D009317C9 /* Acrion */ = {
+		4A949FC32939BE2D009317C9 /* Action */ = {
 			isa = PBXGroup;
 			children = (
 				4A949FC62939BE76009317C9 /* Action.swift */,
 				4A158A5329460E7100180CF9 /* LogAction.swift */,
 			);
-			path = Acrion;
+			path = Action;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

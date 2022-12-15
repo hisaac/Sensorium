@@ -5,5 +5,5 @@ protocol Action {
 	var friendlyName: String { get }
 	var description: String { get }
 
-	var subscriber: any Subscriber { get }
+	func perform(event: SensedEvent)
 }

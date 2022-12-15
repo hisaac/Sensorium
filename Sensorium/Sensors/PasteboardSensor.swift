@@ -2,7 +2,6 @@ import AppKit
 import Combine
 
 final class PasteboardSensor: Sensor {
-	let name = #file
 	let friendlyName = "Pasteboard Sensor"
 	let description = "Senses for changes to the global pasteboard"
 
