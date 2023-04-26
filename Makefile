@@ -16,7 +16,8 @@ scripts_dir := $(project_root_dir)scripts/
 
 .PHONY: up
 up:
-	@echo "Not currently implemented"
+	@echo "Setting up project"
+	@./scripts/setup.sh
 
 
 ### Development ###
@@ -32,8 +33,11 @@ build:
 
 ### Utility ###
 
+.PHONY: reset
+reset: clean
+
 .PHONY: clean
-clean:
+clean: ## Cleans local caches
 	@echo
 	@echo "🧹 Cleaning…"
 	rm -rf DerivedData
@@ -45,7 +49,7 @@ clobber:
 	@echo "Not currently implemented"
 
 .PHONY: nuke
-nuke: clean clobber
+nuke: clean clobber ## Nukes local and global caches
 	@echo
 	@echo "☢️  Nuking…"
 	rm -rf $$HOME/Library/Developer/Xcode/DerivedData
