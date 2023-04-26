@@ -11,13 +11,17 @@
 		4A158A5629460E8C00180CF9 /* PasteboardSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A158A5529460E8C00180CF9 /* PasteboardSensor.swift */; };
 		4A158A5829460EAD00180CF9 /* SensedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A158A5729460EAD00180CF9 /* SensedEvent.swift */; };
 		4A158A6029460EE000180CF9 /* PasteboardSensorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A158A5F29460EE000180CF9 /* PasteboardSensorTests.swift */; };
-		4A19D6EE2939B96900221C75 /* SensoriumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19D6ED2939B96900221C75 /* SensoriumApp.swift */; };
-		4A19D6F02939B96900221C75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19D6EF2939B96900221C75 /* ContentView.swift */; };
+		4A19D6EE2939B96900221C75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19D6ED2939B96900221C75 /* AppDelegate.swift */; };
+		4A19D6F02939B96900221C75 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19D6EF2939B96900221C75 /* SettingsView.swift */; };
 		4A19D6F22939B96A00221C75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A19D6F12939B96A00221C75 /* Assets.xcassets */; };
 		4A19D6F52939B96A00221C75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A19D6F42939B96A00221C75 /* Preview Assets.xcassets */; };
 		4A949FC52939BE6E009317C9 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A949FC42939BE6E009317C9 /* Sensor.swift */; };
 		4A949FC72939BE76009317C9 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A949FC62939BE76009317C9 /* Action.swift */; };
 		4A949FCB2939C027009317C9 /* NSNotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A949FCA2939C027009317C9 /* NSNotificationNames.swift */; };
+		5BBF3D4729F93AC400EAD767 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF3D4629F93AC400EAD767 /* GeneralSettingsView.swift */; };
+		5BBF3D4929F93AE800EAD767 /* DebugSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF3D4829F93AE800EAD767 /* DebugSettingsView.swift */; };
+		5BBF3D4B29F93B7600EAD767 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF3D4A29F93B7600EAD767 /* ViewExtensions.swift */; };
+		5BCA3EC129CF1BD800757D75 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCA3EC029CF1BD800757D75 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,14 +41,21 @@
 		4A158A5D29460EE000180CF9 /* SensoriumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensoriumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A158A5F29460EE000180CF9 /* PasteboardSensorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardSensorTests.swift; sourceTree = "<group>"; };
 		4A19D6EA2939B96900221C75 /* Sensorium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sensorium.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A19D6ED2939B96900221C75 /* SensoriumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensoriumApp.swift; sourceTree = "<group>"; };
-		4A19D6EF2939B96900221C75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4A19D6ED2939B96900221C75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A19D6EF2939B96900221C75 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4A19D6F12939B96A00221C75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A19D6F42939B96A00221C75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4A19D6F62939B96A00221C75 /* Sensorium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sensorium.entitlements; sourceTree = "<group>"; };
 		4A949FC42939BE6E009317C9 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
 		4A949FC62939BE76009317C9 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		4A949FCA2939C027009317C9 /* NSNotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationNames.swift; sourceTree = "<group>"; };
+		5BBF3D4529F9393B00EAD767 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		5BBF3D4629F93AC400EAD767 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
+		5BBF3D4829F93AE800EAD767 /* DebugSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSettingsView.swift; sourceTree = "<group>"; };
+		5BBF3D4A29F93B7600EAD767 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		5BCA3EC029CF1BD800757D75 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		5BCA3EC229CF1D7400757D75 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5BCA3EC329CF1D7400757D75 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +89,9 @@
 			children = (
 				4A19D6EC2939B96900221C75 /* Sensorium */,
 				4A158A5E29460EE000180CF9 /* SensoriumTests */,
+				5BCA3EC329CF1D7400757D75 /* LICENSE */,
+				5BBF3D4529F9393B00EAD767 /* Makefile */,
+				5BCA3EC229CF1D7400757D75 /* README.md */,
 				4A19D6EB2939B96900221C75 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,8 +110,9 @@
 			children = (
 				4A949FC32939BE2D009317C9 /* Action */,
 				4A949FC22939BE29009317C9 /* Sensors */,
-				4A19D6ED2939B96900221C75 /* SensoriumApp.swift */,
-				4A19D6EF2939B96900221C75 /* ContentView.swift */,
+				5BA5035729F935DA00BDE451 /* UI */,
+				4A19D6ED2939B96900221C75 /* AppDelegate.swift */,
+				5BCA3EC029CF1BD800757D75 /* Router.swift */,
 				4A19D6F12939B96A00221C75 /* Assets.xcassets */,
 				4A19D6F62939B96A00221C75 /* Sensorium.entitlements */,
 				4A19D6F32939B96A00221C75 /* Preview Content */,
@@ -131,6 +146,17 @@
 				4A158A5329460E7100180CF9 /* LogAction.swift */,
 			);
 			path = Action;
+			sourceTree = "<group>";
+		};
+		5BA5035729F935DA00BDE451 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4A19D6EF2939B96900221C75 /* SettingsView.swift */,
+				5BBF3D4629F93AC400EAD767 /* GeneralSettingsView.swift */,
+				5BBF3D4829F93AE800EAD767 /* DebugSettingsView.swift */,
+				5BBF3D4A29F93B7600EAD767 /* ViewExtensions.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +205,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					4A158A5C29460EE000180CF9 = {
 						CreatedOnToolsVersion = 14.1;
@@ -242,12 +268,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A158A5629460E8C00180CF9 /* PasteboardSensor.swift in Sources */,
-				4A19D6F02939B96900221C75 /* ContentView.swift in Sources */,
+				4A19D6F02939B96900221C75 /* SettingsView.swift in Sources */,
 				4A158A5829460EAD00180CF9 /* SensedEvent.swift in Sources */,
+				5BBF3D4929F93AE800EAD767 /* DebugSettingsView.swift in Sources */,
 				4A949FCB2939C027009317C9 /* NSNotificationNames.swift in Sources */,
+				5BCA3EC129CF1BD800757D75 /* Router.swift in Sources */,
 				4A949FC72939BE76009317C9 /* Action.swift in Sources */,
+				5BBF3D4729F93AC400EAD767 /* GeneralSettingsView.swift in Sources */,
 				4A949FC52939BE6E009317C9 /* Sensor.swift in Sources */,
-				4A19D6EE2939B96900221C75 /* SensoriumApp.swift in Sources */,
+				4A19D6EE2939B96900221C75 /* AppDelegate.swift in Sources */,
+				5BBF3D4B29F93B7600EAD767 /* ViewExtensions.swift in Sources */,
 				4A158A5429460E7100180CF9 /* LogAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +299,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = F2J52QJQ9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -286,6 +317,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = F2J52QJQ9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -330,6 +362,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -390,6 +423,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -419,6 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Sensorium/Preview Content\"";
 				DEVELOPMENT_TEAM = F2J52QJQ9Y;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -447,6 +482,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Sensorium/Preview Content\"";
 				DEVELOPMENT_TEAM = F2J52QJQ9Y;
 				ENABLE_HARDENED_RUNTIME = YES;

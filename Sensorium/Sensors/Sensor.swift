@@ -5,7 +5,7 @@ protocol Sensor {
 	var friendlyName: String { get }
 	var description: String { get }
 
-	var publisher: any Publisher<SensedEvent, Error> { get }
+	var publisher: any Publisher { get }
 }
 
 extension Sensor {
