@@ -17,7 +17,7 @@ scripts_dir := $(project_root_dir)scripts/
 .PHONY: up
 up:
 	@echo "Setting up project"
-	@./scripts/setup.sh
+	@./scripts/bootstrap.sh
 
 
 ### Development ###
