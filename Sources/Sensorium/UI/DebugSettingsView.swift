@@ -1,6 +1,5 @@
 import Defaults
 import SwiftUI
-import SwiftUILogger
 
 struct DebugSettingsView: View {
 	@State private var logText = ""

@@ -23,6 +23,8 @@
 		5B08032D2A38899500607197 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 5B08032C2A38899500607197 /* KeyboardShortcuts */; };
 		5B08032F2A38947D00607197 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B08032E2A38947D00607197 /* Settings.swift */; };
 		5B0803342A38987400607197 /* LoggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0803332A38987400607197 /* LoggerView.swift */; };
+		5B6C0EC22A38C20A0085A775 /* LogSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6C0EC12A38C20A0085A775 /* LogSensor.swift */; };
+		5B9D6D2A2A38D6440052181B /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9D6D292A38D6440052181B /* Logging.swift */; };
 		5BBF3D4729F93AC400EAD767 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF3D4629F93AC400EAD767 /* GeneralSettingsView.swift */; };
 		5BBF3D4929F93AE800EAD767 /* DebugSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF3D4829F93AE800EAD767 /* DebugSettingsView.swift */; };
 		5BBF3D4B29F93B7600EAD767 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF3D4A29F93B7600EAD767 /* ViewExtensions.swift */; };
@@ -56,6 +58,8 @@
 		4A949FCA2939C027009317C9 /* NSNotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationNames.swift; sourceTree = "<group>"; };
 		5B08032E2A38947D00607197 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		5B0803332A38987400607197 /* LoggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerView.swift; sourceTree = "<group>"; };
+		5B6C0EC12A38C20A0085A775 /* LogSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSensor.swift; sourceTree = "<group>"; };
+		5B9D6D292A38D6440052181B /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		5BBF3D4529F9393B00EAD767 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		5BBF3D4629F93AC400EAD767 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
 		5BBF3D4829F93AE800EAD767 /* DebugSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSettingsView.swift; sourceTree = "<group>"; };
@@ -97,8 +101,7 @@
 		4A19D6E12939B96900221C75 = {
 			isa = PBXGroup;
 			children = (
-				4A19D6EC2939B96900221C75 /* Sensorium */,
-				4A158A5E29460EE000180CF9 /* SensoriumTests */,
+				5B9D6D2B2A38D6590052181B /* Sources */,
 				5BCA3EC329CF1D7400757D75 /* LICENSE */,
 				5BBF3D4529F9393B00EAD767 /* Makefile */,
 				5BCA3EC229CF1D7400757D75 /* README.md */,
@@ -123,6 +126,7 @@
 				5BA5035729F935DA00BDE451 /* UI */,
 				4A19D6ED2939B96900221C75 /* AppDelegate.swift */,
 				5BCA3EC029CF1BD800757D75 /* Router.swift */,
+				5B9D6D292A38D6440052181B /* Logging.swift */,
 				4A19D6F12939B96A00221C75 /* Assets.xcassets */,
 				4A19D6F62939B96A00221C75 /* Sensorium.entitlements */,
 				4A19D6F32939B96A00221C75 /* Preview Content */,
@@ -146,6 +150,7 @@
 				4A158A5729460EAD00180CF9 /* SensedEvent.swift */,
 				4A158A5529460E8C00180CF9 /* PasteboardSensor.swift */,
 				4A949FCA2939C027009317C9 /* NSNotificationNames.swift */,
+				5B6C0EC12A38C20A0085A775 /* LogSensor.swift */,
 			);
 			path = Sensors;
 			sourceTree = "<group>";
@@ -157,6 +162,15 @@
 				4A158A5329460E7100180CF9 /* LogAction.swift */,
 			);
 			path = Actions;
+			sourceTree = "<group>";
+		};
+		5B9D6D2B2A38D6590052181B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4A19D6EC2939B96900221C75 /* Sensorium */,
+				4A158A5E29460EE000180CF9 /* SensoriumTests */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		5BA5035729F935DA00BDE451 /* UI */ = {
@@ -298,11 +312,13 @@
 				5BCA3EC129CF1BD800757D75 /* Router.swift in Sources */,
 				4A949FC72939BE76009317C9 /* Action.swift in Sources */,
 				5BBF3D4729F93AC400EAD767 /* GeneralSettingsView.swift in Sources */,
+				5B6C0EC22A38C20A0085A775 /* LogSensor.swift in Sources */,
 				4A949FC52939BE6E009317C9 /* Sensor.swift in Sources */,
 				4A19D6EE2939B96900221C75 /* AppDelegate.swift in Sources */,
 				5BBF3D4B29F93B7600EAD767 /* ViewExtensions.swift in Sources */,
 				5B0803342A38987400607197 /* LoggerView.swift in Sources */,
 				4A158A5429460E7100180CF9 /* LogAction.swift in Sources */,
+				5B9D6D2A2A38D6440052181B /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,12 +489,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Sensorium/Sensorium.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Sources/Sensorium/Sensorium.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Sensorium/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"$(SRCROOT)/Sources/Sensorium/Preview Content\"";
 				DEVELOPMENT_TEAM = F2J52QJQ9Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -502,12 +518,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Sensorium/Sensorium.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Sources/Sensorium/Sensorium.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Sensorium/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"$(SRCROOT)/Sources/Sensorium/Preview Content\"";
 				DEVELOPMENT_TEAM = F2J52QJQ9Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
