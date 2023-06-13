@@ -7,7 +7,7 @@ final class PasteboardSensor: Sensor {
 
 	let publisher: any Publisher
 
-	init(pasteboard: NSPasteboard) {
+	init(pasteboard: NSPasteboard = NSPasteboard.general) {
 		publisher = PasteboardPublisher(pasteboard: pasteboard)
 	}
 

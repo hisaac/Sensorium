@@ -18,6 +18,11 @@
 		4A949FC52939BE6E009317C9 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A949FC42939BE6E009317C9 /* Sensor.swift */; };
 		4A949FC72939BE76009317C9 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A949FC62939BE76009317C9 /* Action.swift */; };
 		4A949FCB2939C027009317C9 /* NSNotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A949FCA2939C027009317C9 /* NSNotificationNames.swift */; };
+		5B0803272A38894000607197 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 5B0803262A38894000607197 /* LaunchAtLogin */; };
+		5B08032A2A38895900607197 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 5B0803292A38895900607197 /* Defaults */; };
+		5B08032D2A38899500607197 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 5B08032C2A38899500607197 /* KeyboardShortcuts */; };
+		5B08032F2A38947D00607197 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B08032E2A38947D00607197 /* Settings.swift */; };
+		5B0803342A38987400607197 /* LoggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0803332A38987400607197 /* LoggerView.swift */; };
 		5BBF3D4729F93AC400EAD767 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF3D4629F93AC400EAD767 /* GeneralSettingsView.swift */; };
 		5BBF3D4929F93AE800EAD767 /* DebugSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF3D4829F93AE800EAD767 /* DebugSettingsView.swift */; };
 		5BBF3D4B29F93B7600EAD767 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF3D4A29F93B7600EAD767 /* ViewExtensions.swift */; };
@@ -49,6 +54,8 @@
 		4A949FC42939BE6E009317C9 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
 		4A949FC62939BE76009317C9 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		4A949FCA2939C027009317C9 /* NSNotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationNames.swift; sourceTree = "<group>"; };
+		5B08032E2A38947D00607197 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		5B0803332A38987400607197 /* LoggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerView.swift; sourceTree = "<group>"; };
 		5BBF3D4529F9393B00EAD767 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		5BBF3D4629F93AC400EAD767 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
 		5BBF3D4829F93AE800EAD767 /* DebugSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSettingsView.swift; sourceTree = "<group>"; };
@@ -70,6 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B08032A2A38895900607197 /* Defaults in Frameworks */,
+				5B0803272A38894000607197 /* LaunchAtLogin in Frameworks */,
+				5B08032D2A38899500607197 /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +118,7 @@
 		4A19D6EC2939B96900221C75 /* Sensorium */ = {
 			isa = PBXGroup;
 			children = (
-				4A949FC32939BE2D009317C9 /* Action */,
+				4A949FC32939BE2D009317C9 /* Actions */,
 				4A949FC22939BE29009317C9 /* Sensors */,
 				5BA5035729F935DA00BDE451 /* UI */,
 				4A19D6ED2939B96900221C75 /* AppDelegate.swift */,
@@ -116,6 +126,7 @@
 				4A19D6F12939B96A00221C75 /* Assets.xcassets */,
 				4A19D6F62939B96A00221C75 /* Sensorium.entitlements */,
 				4A19D6F32939B96A00221C75 /* Preview Content */,
+				5B08032E2A38947D00607197 /* Settings.swift */,
 			);
 			path = Sensorium;
 			sourceTree = "<group>";
@@ -139,13 +150,13 @@
 			path = Sensors;
 			sourceTree = "<group>";
 		};
-		4A949FC32939BE2D009317C9 /* Action */ = {
+		4A949FC32939BE2D009317C9 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
 				4A949FC62939BE76009317C9 /* Action.swift */,
 				4A158A5329460E7100180CF9 /* LogAction.swift */,
 			);
-			path = Action;
+			path = Actions;
 			sourceTree = "<group>";
 		};
 		5BA5035729F935DA00BDE451 /* UI */ = {
@@ -155,6 +166,7 @@
 				5BBF3D4629F93AC400EAD767 /* GeneralSettingsView.swift */,
 				5BBF3D4829F93AE800EAD767 /* DebugSettingsView.swift */,
 				5BBF3D4A29F93B7600EAD767 /* ViewExtensions.swift */,
+				5B0803332A38987400607197 /* LoggerView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -193,6 +205,11 @@
 			dependencies = (
 			);
 			name = Sensorium;
+			packageProductDependencies = (
+				5B0803262A38894000607197 /* LaunchAtLogin */,
+				5B0803292A38895900607197 /* Defaults */,
+				5B08032C2A38899500607197 /* KeyboardShortcuts */,
+			);
 			productName = Sensorium;
 			productReference = 4A19D6EA2939B96900221C75 /* Sensorium.app */;
 			productType = "com.apple.product-type.application";
@@ -225,6 +242,11 @@
 				Base,
 			);
 			mainGroup = 4A19D6E12939B96900221C75;
+			packageReferences = (
+				5B0803252A38894000607197 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+				5B0803282A38895900607197 /* XCRemoteSwiftPackageReference "Defaults" */,
+				5B08032B2A38899500607197 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+			);
 			productRefGroup = 4A19D6EB2939B96900221C75 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,6 +291,7 @@
 			files = (
 				4A158A5629460E8C00180CF9 /* PasteboardSensor.swift in Sources */,
 				4A19D6F02939B96900221C75 /* SettingsView.swift in Sources */,
+				5B08032F2A38947D00607197 /* Settings.swift in Sources */,
 				4A158A5829460EAD00180CF9 /* SensedEvent.swift in Sources */,
 				5BBF3D4929F93AE800EAD767 /* DebugSettingsView.swift in Sources */,
 				4A949FCB2939C027009317C9 /* NSNotificationNames.swift in Sources */,
@@ -278,6 +301,7 @@
 				4A949FC52939BE6E009317C9 /* Sensor.swift in Sources */,
 				4A19D6EE2939B96900221C75 /* AppDelegate.swift in Sources */,
 				5BBF3D4B29F93B7600EAD767 /* ViewExtensions.swift in Sources */,
+				5B0803342A38987400607197 /* LoggerView.swift in Sources */,
 				4A158A5429460E7100180CF9 /* LogAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,6 +557,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B0803252A38894000607197 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
+		5B0803282A38895900607197 /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults";
+			requirement = {
+				kind = exactVersion;
+				version = 7.2.0;
+			};
+		};
+		5B08032B2A38899500607197 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = exactVersion;
+				version = 1.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B0803262A38894000607197 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B0803252A38894000607197 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
+		};
+		5B0803292A38895900607197 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B0803282A38895900607197 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+		5B08032C2A38899500607197 /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B08032B2A38899500607197 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A19D6E22939B96900221C75 /* Project object */;
 }

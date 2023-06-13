@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "defaults",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/Defaults",
+      "state" : {
+        "revision" : "0f5a23fcbd83eb72f6d405aa85bbfacaffb99b03",
+        "version" : "7.2.0"
+      }
+    },
+    {
+      "identity" : "keyboardshortcuts",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/KeyboardShortcuts",
+      "state" : {
+        "revision" : "018e445b340dac78dfc2a4c97c45d9571507c3b5",
+        "version" : "1.11.0"
+      }
+    },
+    {
+      "identity" : "launchatlogin-modern",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/LaunchAtLogin-Modern",
+      "state" : {
+        "revision" : "638e6c426b8d113eae255baeba59ed2d9d9a7c4d",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}

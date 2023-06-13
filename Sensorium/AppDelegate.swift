@@ -1,3 +1,4 @@
+import Foundation
 import SwiftUI
 
 @main
@@ -12,8 +13,38 @@ struct SensoriumApp: App {
 }
 
 class AppDelegate: NSObject, NSApplicationDelegate {
+	private var window: NSWindow!
+	private var windowController: NSWindowController!
+
+	let eventRouter = EventRouter()
+
 	func applicationDidFinishLaunching(_ notification: Notification) {
+		window = NSWindow(
+			contentRect: NSZeroRect,
+			styleMask: [.closable, .titled],
+			backing: .buffered,
+			defer: true
+		)
+
+		window.title = Bundle.main.infoDictionary?["CFBundleName"] as! String
+
+		window.contentView = NSHostingView(rootView: SettingsView())
+		windowController = NSWindowController(window: window)
+
 		openSettingsWindow()
+	}
+
+	private var launchedAsLogInItem: Bool {
+		// source: https://hisaac.net/how-to-detect-if-your-macos-app-was-launched-as-a-login-item/
+		guard let event = NSAppleEventManager.shared().currentAppleEvent else { return false }
+		return
+			event.eventID == kAEOpenApplication &&
+			event.paramDescriptor(forKeyword: keyAEPropData)?.enumCodeValue == keyAELaunchedAsLogInItem
+	}
+
+	func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+		openSettingsWindow()
+		return true
 	}
 
 	func openSettingsWindow() {
@@ -25,17 +56,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			return
 		}
 
-		NSApplication.shared.showSettingsWindow()
-	}
-}
-
-extension NSApplication {
-	func showSettingsWindow() {
 		// source: https://stackoverflow.com/a/75712446/4118208
-		if #available(macOS 13, *) {
-			NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
-		} else {
-			NSApp.sendAction(Selector(("showPreferencesWindow:")), to: nil, from: nil)
-		}
+		NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
 	}
 }

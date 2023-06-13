@@ -1,3 +1,5 @@
+import Defaults
+import LaunchAtLogin
 import SwiftUI
 
 struct SettingsView: View {
@@ -7,13 +9,15 @@ struct SettingsView: View {
 				.tabItem {
 					Label("General", systemImage: "gear")
 				}
+				.tag(1)
 
 			DebugSettingsView()
 				.tabItem {
 					Label("Debug", systemImage: "figure.squash")
 				}
+				.tag(2)
 		}
-		.frame(width: 450, height: 250)
+		.frame(width: 480, height: 300)
 	}
 }
 
