@@ -88,16 +88,3 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-
-# Tuist
-
-### Projects ###
-*.xcodeproj
-*.xcworkspace
-
-### Tuist derived files ###
-graph.dot
-Derived/
-
-### Tuist managed dependencies ###
-Tuist/Dependencies

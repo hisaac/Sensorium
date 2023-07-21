@@ -10,9 +10,11 @@
 # Note: This assumes that the script is located in a subdirectory of the `scripts` directory.
 #       If it's not, you'll need to adjust the path accordingly.
 
+# Bash Strict Mode (http://redsymbol.net/articles/unofficial-bash-strict-mode/)
 set -o errexit  # Exit on error
 set -o nounset  # Exit on unset variable
 set -o pipefail # Exit on pipe failure
+IFS=$'\n\t'     # Set the internal field separator to a newline and a tab
 
 # Output extra debug logging if `TRACE` is set to `true`
 # or if `ACTIONS_STEP_DEBUG` is set to `true` (GitHub Actions)
@@ -50,51 +52,26 @@ err() {
 	echo -e "${TEXT_RED:-}ERROR:${TEXT_BOLD:-} $1" "${TEXT_RESET:-}" >&2
 }
 
-# Setup variables
-
 setup_global_variables() {
-	# Absolute path to the directory containing this script
-	local SCRIPT_CONTAINING_DIR
-	SCRIPT_CONTAINING_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
 	# Absolute path to the root directory of the project
-	PROJECT_ROOT="$(cd "${SCRIPT_CONTAINING_DIR}/.." && pwd)"
+	PROJECT_ROOT="$(dirname -- "$(dirname -- "$(readlink -f "${BASH_SOURCE[0]}")")")"
 	export PROJECT_ROOT
 
 	# Absolute path to the directory containing the scripts
-	SCRIPTS_DIR="${PROJECT_ROOT}/scripts"
-	export SCRIPTS_DIR
-
-	# Absolute path to the directory containing the artifacts
-	ARTIFACTS_DIR="${PROJECT_ROOT}/artifacts"
-	export ARTIFACTS_DIR
-
-	# Absolute path to the directory containing the build
-	BUILD_DIR="${PROJECT_ROOT}/build"
-	export BUILD_DIR
+	export SCRIPTS_DIR="${PROJECT_ROOT}/scripts"
 
 	# Absolute path to the Xcode project file
-	XCODE_PROJECT="${PROJECT_ROOT}/Sensorium.xcodeproj"
-	export XCODE_PROJECT
+	export XCODE_PROJECT="${PROJECT_ROOT}/Sensorium.xcodeproj"
 
 	# Absolute path to the DerivedData directory
-	DERIVED_DATA_DIR="${PROJECT_ROOT}/derivedData"
-	export DERIVED_DATA_DIR
+	export DERIVED_DATA_DIR="${PROJECT_ROOT}/derivedData"
 
 	# Absolute path to the directory containing the tools
-	TOOLS_DIR="${PROJECT_ROOT}/tools"
-	export TOOLS_DIR
+	export TOOLS_DIR="${PROJECT_ROOT}/tools"
 
 	# Whether or not we're running in CI
-	# Can be specified by the caller,
-	# or we'll default to `true` if the
-	# `GITHUB_ACTIONS` environment variable is set
-	IS_CI="${CI:-${GITHUB_ACTIONS:-false}}"
-	export IS_CI
+	# Can be specified by the caller, or we'll default to `true`
+	# if the `GITHUB_ACTIONS` environment variable is set
+	export IS_CI="${CI:-${GITHUB_ACTIONS:-false}}"
 }
-
-main() {
-	setup_global_variables
-}
-
-main "$@"
+setup_global_variables

@@ -6,5 +6,6 @@
 		"shellcheckrc",
 		"wholemodule"
 	],
-	"lldb.library": "/Applications/Xcode-14.3.1.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB"
+	"lldb.library": "/Applications/Xcode-14.3.1.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+	"lldb.launch.expressions": "native"
 }

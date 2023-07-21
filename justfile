@@ -17,30 +17,17 @@ alias up := bootstrap
 
 ### Development ###
 
-dependencies:
-    tuist fetch
+dev: bootstrap open
 
-generate:
-    tuist generate
-
-dev: bootstrap dependencies generate
-
-edit:
-    tuist edit
-
-build:
-    @echo "Not implemented yet"
+open:
+    xcrun xed {{ project_root }}/Sensorium.xcodeproj
 
 
 ### Utility ###
 
 clean:
     @echo "🧹 Cleaning up local caches..."
-    rm -rf {{ project_root }}/Derived
     rm -rf {{ project_root }}/DerivedData
-    rm -rf {{ project_root }}/Sensorium.xcodeproj
-    rm -rf {{ project_root }}/Sensorium.xcworkspace
-    rm -rf {{ project_root }}/Tuist/Dependencies
 
 nuke: clean
     @echo "☢️  Nuking global caches..."

@@ -13,9 +13,3 @@ if ! command -v just &> /dev/null; then
 	warn ""
 	warn "For more information and other installation options, see https://just.systems/man/en/chapter_4.html"
 fi
-
-# Install Tuist
-if ! command -v tuist &> /dev/null; then
-	info "Installing Tuist..."
-	curl -Ls https://install.tuist.io | bash
-fi
