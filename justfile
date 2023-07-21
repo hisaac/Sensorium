@@ -15,7 +15,7 @@ bootstrap:
 
 alias up := bootstrap
 
-# sfdlkjsdkfljfjklsd
+# sfdlkjsdkfljfjklsdfsdasfdasdf
 ### Development ###
 
 dev: bootstrap open
