@@ -12,6 +12,7 @@ bootstrap:
     @echo "Setting up..."
     {{ scripts_dir }}/tools.sh
 
+
 alias up := bootstrap
 
 
