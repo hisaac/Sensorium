@@ -22,7 +22,3 @@ Credit where credit is due, this app is heavily inspired by @dustinrue's excelle
 ## A Note on Maintenance
 
 I have a full life outside of working on software, and this is just a hobby of mine. I make no guarantees of speed of development or addition of features. That said, I do want to make the app useful and valuable to folks other than myself, so don't hesitate to [open an Issue](https://github.com/hisaac/Sensorium/issues/new/choose) if you've got an idea, question, or issue to report.
-
-## Notes to Myself
-
-- Maybe a good persistance library: <https://mergesort.github.io/Boutique/documentation/boutique/>
