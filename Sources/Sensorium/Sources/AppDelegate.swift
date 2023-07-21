@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+import OSLog
 
 @main
 struct SensoriumApp: App {

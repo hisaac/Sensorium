@@ -1,7 +1,6 @@
-import Combine
-import Foundation
-import os.log
+import OSLog
 
-enum Logging {
-
+extension Logger {
+	private static var subsystem = Bundle.main.bundleIdentifier!
+	static let general = Logger(subsystem: subsystem, category: "general")
 }

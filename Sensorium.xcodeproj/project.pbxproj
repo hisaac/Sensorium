@@ -148,11 +148,11 @@
 			children = (
 				5B37F94F2A6A0CA300022E50 /* UI */,
 				5B37F9552A6A0CA300022E50 /* Sensors */,
+				5B37F95E2A6A0CA300022E50 /* Actions */,
+				5B37F9612A6A0CA300022E50 /* AppDelegate.swift */,
 				5B37F95B2A6A0CA300022E50 /* Logging.swift */,
 				5B37F95C2A6A0CA300022E50 /* Router.swift */,
 				5B37F95D2A6A0CA300022E50 /* Settings.swift */,
-				5B37F95E2A6A0CA300022E50 /* Actions */,
-				5B37F9612A6A0CA300022E50 /* AppDelegate.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
