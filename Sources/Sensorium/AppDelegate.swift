@@ -1,9 +1,8 @@
 import AppKit
-import Foundation
 import SwiftUI
 
 @main
-class AppDelegate: NSObject, NSApplicationDelegate {
+final class AppDelegate: NSObject, NSApplicationDelegate {
 	private var window: NSWindow!
 	private var windowController: NSWindowController!
 
@@ -15,14 +14,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			defer: true
 		)
 
-		window.title = Bundle.main.infoDictionary?["CFBundleName"] as? String ?? "Sensorium"
+		window.title = "Sensorium"
 		window.contentView = NSHostingView(rootView: SettingsView())
 		windowController = NSWindowController(window: window)
 
 		openSettingsWindow()
 	}
 
-	func openSettingsWindow() {
+	private func openSettingsWindow() {
 		// Works around an annoyance where the app always comes to the foreground
 		// when being previewed in Xcode's SwiftUI Canvas
 		guard

@@ -28,6 +28,11 @@ targets:
     settings:
       CODE_SIGNING_ALLOWED: NO
       GENERATE_INFOPLIST_FILE: YES
+      INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
+      INFOPLIST_KEY_NSMainNibFile: MainMenu
+      INFOPLIST_KEY_NSPrincipalClass: NSApplication
+    entitlements:
+      path: Sources/${target_name}/Resources/${target_name}.entitlements
 
   SensoriumCLI:
     templates: [base]
