@@ -11,8 +11,9 @@ default:
 bootstrap:
 	@echo "Setting up..."
 	{{ scripts_dir }}/tools.sh
-	{{ scripts_dir }}/set-local-derived-data.sh {{ project_root }}/Sensorium.xcodeproj
 	xcodes select
+	xcodegen generate
+	{{ scripts_dir }}/set-local-derived-data.sh {{ project_root }}/Sensorium.xcodeproj
 
 alias up := bootstrap
 

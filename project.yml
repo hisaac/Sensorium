@@ -8,6 +8,10 @@ options:
   deploymentTarget:
     macOS: 13.0
   groupSortPosition: top
+  settings:
+    ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: YES # Recommended by Xcode
+    DEAD_CODE_STRIPPING: YES # Recommended by Xcode
+    ENABLE_USER_SCRIPT_SANDBOXING: NO # Needed to allow SwiftLint to run
 
 packages:
   SwiftLint:
@@ -16,11 +20,14 @@ packages:
 
 targets:
 
-  SensoriumApp:
+  Sensorium:
     templates: [base]
     type: application
     dependencies:
       - target: SensoriumKit
+    settings:
+      CODE_SIGNING_ALLOWED: NO
+      GENERATE_INFOPLIST_FILE: YES
 
   SensoriumCLI:
     templates: [base]
@@ -31,11 +38,13 @@ targets:
   SensoriumKit:
     templates: [base]
     type: framework
+    settings:
+      ENABLE_MODULE_VERIFIER: YES # Recommended by Xcode
 
 targetTemplates:
   base:
     platform: macOS
     sources: ["Sources/${target_name}"]
     buildToolPlugins:
-      - plugin: SwiftLint
+      - plugin: SwiftLintPlugin
         package: SwiftLint
