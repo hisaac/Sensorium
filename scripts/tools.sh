@@ -13,3 +13,10 @@ if ! command -v just &> /dev/null; then
 	warn ""
 	warn "For more information and other installation options, see https://just.systems/man/en/chapter_4.html"
 fi
+
+if ! command -v xcodes &> /dev/null; then
+	warn "This project uses xcodes (https://github.com/XcodesOrg/xcodes) for managing Xcode versions."
+	warn "Please install it by running the following command:"
+	warn ""
+	warn "    brew install xcodes"
+fi

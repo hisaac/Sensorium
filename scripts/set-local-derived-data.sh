@@ -16,7 +16,7 @@ main() {
 		exit 1
 	fi
 
-	local -r project_file="$1"
+	declare -r project_file="$1"
 
 	case "$project_file" in
 	*.xcodeproj) ;;
@@ -36,7 +36,7 @@ main() {
 
 set_local_derived_data() {
 	# Absolute path to the `.xcodeproj` or `.xcworkspace` file
-	local -r project_file=$1
+	declare -r project_file=$1
 
 	if [[ ! -d "$project_file" ]]; then
 		echo "Error: $project_file does not exist or is not a directory"
@@ -44,19 +44,17 @@ set_local_derived_data() {
 	fi
 
 	# Absolute path to the current user's `xcuserdatad` directory
-	current_user=$(whoami)
-	local -r current_user
-	local xcuserdatad_dir
+	declare -r current_user=$(whoami)
 	if [[ "$project_file" == *".xcodeproj" ]]; then
-		xcuserdatad_dir="${project_file}/project.xcworkspace/xcuserdata/${current_user}.xcuserdatad"
+		declare -r xcuserdatad_dir="${project_file}/project.xcworkspace/xcuserdata/${current_user}.xcuserdatad"
 	elif [[ "$project_file" == *".xcworkspace" ]]; then
-		xcuserdatad_dir="${project_file}/xcuserdata/${current_user}.xcuserdatad"
+		declare -r xcuserdatad_dir="${project_file}/xcuserdata/${current_user}.xcuserdatad"
 	fi
 
 	# Create the `xcuserdatad` directory if it doesn't exist
 	mkdir -p "$xcuserdatad_dir"
 
-	local -r workspace_settings_plist_path="${xcuserdatad_dir}/WorkspaceSettings.xcsettings"
+	declare -r workspace_settings_plist_path="${xcuserdatad_dir}/WorkspaceSettings.xcsettings"
 
 	# Create the `WorkspaceSettings.xcsettings` file if it doesn't exist
 	if [[ ! -f "$workspace_settings_plist_path" ]]; then

@@ -2,7 +2,7 @@
 
 import XCTest
 
-final class PasteboardSenserTests: XCTestCase {
+final class PasteboardSensorTests: XCTestCase {
 	var testPasteboard: NSPasteboard!
 
 	override func setUpWithError() throws {
