@@ -4,19 +4,21 @@ import SwiftUI
 @main
 final class AppDelegate: NSObject, NSApplicationDelegate {
 	private var window: NSWindow!
-	private var windowController: NSWindowController!
 
 	func applicationDidFinishLaunching(_ notification: Notification) {
+		let contentView = NSHostingView(rootView: SettingsView())
+		let contentSize = contentView.fittingSize
+		let windowRect = NSRect(x: 0, y: 0, width: contentSize.width, height: contentSize.height)
+
 		window = NSWindow(
-			contentRect: NSRect.zero,
+			contentRect: windowRect,
 			styleMask: [.closable, .titled],
 			backing: .buffered,
 			defer: true
 		)
 
 		window.title = "Sensorium"
-		window.contentView = NSHostingView(rootView: SettingsView())
-		windowController = NSWindowController(window: window)
+		window.contentView = contentView
 
 		openSettingsWindow()
 	}
@@ -30,8 +32,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 			return
 		}
 
-		windowController.window?.center()
-		windowController.showWindow(self)
+		window.center()
+		window.makeKeyAndOrderFront(nil)
 
 		if #available(macOS 14, *) {
 			NSApp.activate()

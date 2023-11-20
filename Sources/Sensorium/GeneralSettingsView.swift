@@ -13,9 +13,8 @@ struct GeneralSettingsView: View {
 						NSApp.terminate(nil)
 					}
 				}
-			}
-		}
-		.frame(width: 480, height: 300)
+			}.scenePadding(.top)
+		}.scenePadding()
 	}
 }
 

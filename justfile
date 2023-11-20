@@ -13,7 +13,6 @@ bootstrap:
 	{{ scripts_dir }}/tools.sh
 	xcodes select
 	xcodegen generate
-	{{ scripts_dir }}/set-local-derived-data.sh {{ project_root }}/Sensorium.xcodeproj
 
 alias up := bootstrap
 
@@ -31,6 +30,7 @@ open:
 clean:
 	@echo "🧹 Cleaning up local caches..."
 	rm -rf {{ project_root }}/DerivedData
+	rm -rf {{ project_root }}/Sensorium.xcodeproj
 
 nuke: clean
 	@echo "☢️  Nuking global caches..."

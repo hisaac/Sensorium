@@ -8,15 +8,34 @@ options:
   deploymentTarget:
     macOS: 13.0
   groupSortPosition: top
-  settings:
-    ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: YES # Recommended by Xcode
-    DEAD_CODE_STRIPPING: YES # Recommended by Xcode
-    ENABLE_USER_SCRIPT_SANDBOXING: NO # Needed to allow SwiftLint to run
+  postGenCommand: scripts/set-local-derived-data.sh Sensorium.xcodeproj
+
+fileGroups:
+- .github
+- .gitignore
+- .swiftlint.yml
+- .xcode-version
+- Configs
+- justfile
+- LICENSE
+- NOTES.md
+- project.yml
+- README.md
+- scripts
+
+configFiles:
+  Debug: Configs/Project.Debug.xcconfig
+  Release: Configs/Project.Release.xcconfig
 
 packages:
   SwiftLint:
     url: https://github.com/realm/SwiftLint
     from: 0.54.0
+  AsyncAlgorithms:
+    url: https://github.com/apple/swift-async-algorithms
+    from: 0.1.0
+  VerifyNoBuildSettings:
+    path: Packages/VerifyNoBuildSettings
 
 targets:
 
@@ -25,12 +44,6 @@ targets:
     type: application
     dependencies:
       - target: SensoriumKit
-    settings:
-      CODE_SIGNING_ALLOWED: NO
-      GENERATE_INFOPLIST_FILE: YES
-      INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
-      INFOPLIST_KEY_NSMainNibFile: MainMenu
-      INFOPLIST_KEY_NSPrincipalClass: NSApplication
     entitlements:
       path: Sources/${target_name}/Resources/${target_name}.entitlements
 
@@ -43,13 +56,18 @@ targets:
   SensoriumKit:
     templates: [base]
     type: framework
-    settings:
-      ENABLE_MODULE_VERIFIER: YES # Recommended by Xcode
+    dependencies:
+      - package: AsyncAlgorithms
 
 targetTemplates:
   base:
     platform: macOS
     sources: ["Sources/${target_name}"]
+    configFiles:
+      Debug: Sources/${target_name}/Configs/${target_name}.Debug.xcconfig
+      Release: Sources/${target_name}/Configs/${target_name}.Release.xcconfig
     buildToolPlugins:
       - plugin: SwiftLintPlugin
         package: SwiftLint
+      - plugin: VerifyNoBuildSettingsPlugin
+        package: VerifyNoBuildSettings

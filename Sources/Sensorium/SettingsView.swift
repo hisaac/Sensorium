@@ -7,8 +7,7 @@ struct SettingsView: View {
 				.tabItem {
 					Label("General", systemImage: "gear")
 				}
-				.tag(1)
-		}
+		}.scenePadding()
 	}
 }
 
