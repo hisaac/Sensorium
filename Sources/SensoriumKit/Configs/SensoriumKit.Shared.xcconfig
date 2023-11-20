@@ -64,3 +64,69 @@ PRODUCT_BUNDLE_IDENTIFIER = net.hisaac.SensoriumKit
 // If enabled, don't install built products even if deployment locations are active.
 
 SKIP_INSTALL = YES
+
+
+
+// Code Signing Identity
+//
+// The name, also known as the _common name_, of a valid code-signing certificate in a
+// keychain within your keychain path. A missing or invalid certificate will cause a build
+// error.
+//
+// (Added by Xcode if not provided explicitly)
+CODE_SIGN_IDENTITY = ""
+
+
+
+// Current Project Version
+//
+// This setting defines the current version of the project. The value must be a integer or
+// floating point number, such as `57` or `365.8`.
+//
+// When `GENERATE_INFOPLIST_FILE` is enabled, sets the value of the [CFBundleVersion](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleversion)
+// key in the `Info.plist` file to the value of this build setting.
+//
+// (Added by Xcode if not provided explicitly)
+CURRENT_PROJECT_VERSION = 1
+
+
+
+// Combability Version
+//
+// Determines the compatibility version of the resulting library, bundle, or framework binary.
+//
+// See [Dynamic Library Design Guidelines](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/DynamicLibraryDesignGuidelines.html#//apple_ref/doc/uid/TP40002013-SW19)
+// in [Dynamic Library Programming Topics](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/DynamicLibraries/000-Introduction/Introduction.html)
+// for details on assigning version numbers of dynamic libraries.
+//
+// (Added by Xcode if not provided explicitly)
+DYLIB_COMPATIBILITY_VERSION = 1
+
+
+
+// Current Library Version
+//
+// This setting defines the current version of any framework built by the project.
+// As with `CURRENT_PROJECT_VERSION`, the value must be an integer or floating point number,
+// such as `57` or `365.8`.
+//
+// See [Dynamic Library Design Guidelines](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/DynamicLibraryDesignGuidelines.html#//apple_ref/doc/uid/TP40002013-SW19)
+// in [Dynamic Library Programming Topics](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/DynamicLibraries/000-Introduction/Introduction.html)
+// for details on assigning version numbers of dynamic libraries.
+//
+// (Added by Xcode if not provided explicitly)
+DYLIB_CURRENT_VERSION = 1
+
+
+
+// Versioning System
+//
+// Selects the process used for version-stamping generated files.
+//
+// - None: Use no versioning system.
+// - Apple Generic: Use the current project version setting. [apple-generic]
+// - Apple Generic (Hidden Symbols): Use the current project version setting with
+//   hidden-visibility symbols. [apple-generic-hidden]
+//
+// (Added by Xcode if not provided explicitly)
+VERSIONING_SYSTEM = "apple-generic"

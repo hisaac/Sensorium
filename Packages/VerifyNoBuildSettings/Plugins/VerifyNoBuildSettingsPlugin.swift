@@ -4,8 +4,7 @@ import XcodeProjectPlugin
 
 @main
 struct VerifyNoBuildSettingsPlugin: BuildToolPlugin, XcodeBuildToolPlugin {
-	let packageName = "VerifyNoBuildSettings"
-	let fileManager = FileManager.default
+	private let packageName = "VerifyNoBuildSettings"
 
 	func createBuildCommands(context: XcodePluginContext, target: XcodeTarget) throws -> [Command] {
 		let projectRootContents = try FileManager.default.contentsOfDirectory(
@@ -20,12 +19,12 @@ struct VerifyNoBuildSettingsPlugin: BuildToolPlugin, XcodeBuildToolPlugin {
 				displayName: packageName,
 				executable: try context.tool(named: packageName).path,
 				arguments: [projectFilePath]
-			)
+			),
 		]
 	}
 
 	func createBuildCommands(context: PluginContext, target: Target) throws -> [Command] {
-		print("\(packageName) is only meant to be run within Xcode projects")
+		print("warning: \(packageName) is only meant to be run within Xcode projects")
 		return []
 	}
 }
