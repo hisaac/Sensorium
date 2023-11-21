@@ -10,18 +10,18 @@ options:
   groupSortPosition: top
   postGenCommand: scripts/set-local-derived-data.sh Sensorium.xcodeproj
 
-# fileGroups:
-# - .github
-# - .gitignore
-# - .swiftlint.yml
-# - .xcode-version
-# - Configs
-# - justfile
-# - LICENSE
-# - NOTES.md
-# - project.yml
-# - README.md
-# - scripts
+fileGroups:
+- .github
+- .gitignore
+- .swiftlint.yml
+- .xcode-version
+- Configs
+- justfile
+- LICENSE
+- NOTES.md
+- project.yml
+- README.md
+- scripts
 
 configFiles:
   Debug: Configs/Project.Debug.xcconfig

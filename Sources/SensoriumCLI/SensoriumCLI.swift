@@ -1,13 +1,18 @@
+import AppKit
 import Foundation
+import Combine
 import SensoriumKit
 
 @main
 struct SensoriumCLI {
-	static func main() throws {
-//		let pasteboardSensor = PasteboardSensor()
-//		pasteboardSensor.start()
+	static var cancellables: Set<AnyCancellable> = []
 
-		let pasteboardSensor2 = PasteboardSensor2()
+	static func main() throws {
+		NSPasteboard.general.publisher
+			.compactMap(\.stringValue)
+			.removeDuplicates()
+			.sink { print($0) }
+			.store(in: &cancellables)
 
 		RunLoop.main.run()
 	}
