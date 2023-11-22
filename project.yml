@@ -22,6 +22,7 @@ fileGroups:
 - project.yml
 - README.md
 - scripts
+- Sources
 
 configFiles:
   Debug: Configs/Project.Debug.xcconfig
@@ -31,9 +32,6 @@ packages:
   SwiftLint:
     url: https://github.com/realm/SwiftLint
     from: 0.54.0
-  AsyncAlgorithms:
-    url: https://github.com/apple/swift-async-algorithms
-    from: 0.1.0
   VerifyNoBuildSettings:
     path: Packages/VerifyNoBuildSettings
 
@@ -56,8 +54,6 @@ targets:
   SensoriumKit:
     templates: [base]
     type: framework
-    dependencies:
-      - package: AsyncAlgorithms
 
 targetTemplates:
   base:
